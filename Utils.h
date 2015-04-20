@@ -18,7 +18,9 @@
     void applyLogic(Logic * logic){
         try {
             logic->apply();
-        }catch(){}
+        }catch(...){
+            std::cout<<"BLAMO!: exception occured"<<std::endl;
+        }
     }//..
 
     void startThread(Logic * logic){
